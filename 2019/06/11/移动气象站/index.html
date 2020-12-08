@@ -1,37 +1,1011 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+  
 
 
-{% block content %}
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Fraunhofer's Test Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="这是报告《移动气象站》的摘要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动气象站">
+<meta property="og:url" content="http://yoursite.com/2019/06/11/移动气象站/index.html">
+<meta property="og:site_name" content="Fraunhofer&#39;s Test Blog">
+<meta property="og:description" content="这是报告《移动气象站》的摘要">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558158962093.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558159947380.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/Arduino_Nano%E4%B8%BB%E8%A6%81%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/Arduino-nano%E5%BC%95%E8%84%9A%E8%AF%B4%E6%98%8E-1558177504021.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558184336321.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/d50735fae6cd7b892f8a3c200f2442a7d8330eaa.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/timg.jpeg">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/ML8511-1.JPG">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558229417061.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558185606031.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558186643486.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558185841710.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558185891132.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558187612642.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558194529201.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558230094866.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558230347837.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558194570589.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558236816792.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558237464902.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558237506432.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/11/移动气象站/1558238062125.png">
+<meta property="og:updated_time" content="2019-12-15T12:50:09.389Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动气象站">
+<meta name="twitter:description" content="这是报告《移动气象站》的摘要">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/11/移动气象站/1558158962093.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/11/移动气象站/">
+
+
+
+
+
+  <title>移动气象站 | Fraunhofer's Test Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fraunhofer's Test Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/11/移动气象站/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Twang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/5.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fraunhofer's Test Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动气象站</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T16:51:45+08:00">
+                2019-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/课程/" itemprop="url" rel="index">
+                    <span itemprop="name">课程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是报告《移动气象站》的摘要</p>
+<a id="more"></a>
+
+<p>移动气象站</p>
+<p><img src="/2019/06/11/移动气象站/1558158962093.png" alt="1558158962093"></p>
+<p><strong>我们写期末报告大概要写这些</strong></p>
+<h3 id="1-总体构思"><a href="#1-总体构思" class="headerlink" title="1.总体构思"></a>1.总体构思</h3><p><img src="/2019/06/11/移动气象站/1558159947380.png" alt="1558159947380"></p>
+<h3 id="2-单片机选型"><a href="#2-单片机选型" class="headerlink" title="2.单片机选型"></a>2.单片机选型</h3><h4 id="2-1-Arduino-Nano简介"><a href="#2-1-Arduino-Nano简介" class="headerlink" title="2.1 Arduino Nano简介"></a>2.1 Arduino Nano简介</h4><p>Arduino Nano 是一款小巧的，完成可以使用在面包板的CPU，ATmega328P产品。提供与UNO板子一样的外部连接特性，并且也具有外部的插脚接口。UNO是一个意大利语，是一的意思，即Arduino UNO是Arduino的第一个控制板子。Arduino Nano字面翻译Nano是侏儒的意思，即是一个个头很小的板子。Arduino Nano是一款基于ATmega328P的小型，完整且面包板友好型电路板;以较小的外形提供UNO板的相同连接和规格。</p>
+<p>可以使用Arduino的编程软件（IDE）来为Arduino Nano编程，这个合成的开发环境具有和其他产品相当的特性，可以对板子进行在线或离线编程。</p>
+<h4 id="2-2-Arduino-Nano技术参数"><a href="#2-2-Arduino-Nano技术参数" class="headerlink" title="2.2 Arduino Nano技术参数"></a>2.2 Arduino Nano技术参数</h4><p><img src="/2019/06/11/移动气象站/Arduino_Nano%E4%B8%BB%E8%A6%81%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0.png" alt="Arduino_Nano主要技术参数"></p>
+<h4 id="2-3-Arduino-Nano引脚图"><a href="#2-3-Arduino-Nano引脚图" class="headerlink" title="2.3 Arduino Nano引脚图"></a>2.3 Arduino Nano引脚图</h4><p><img src="/2019/06/11/移动气象站/Arduino-nano%E5%BC%95%E8%84%9A%E8%AF%B4%E6%98%8E-1558177504021.jpg" alt="Arduino-nano引脚说明"></p>
+<p><a href="https://blog.csdn.net/sdlgq/article/details/57074744" target="_blank" rel="noopener">引脚分配注意事项</a>：</p>
+<ul>
+<li>0、1为Rx、Tx 针脚，这两个针脚一般作为串口使用，非串口设备尽量不占用该针脚。</li>
+<li>2、3为中断口，分别对应中断0、中断1，需要中断功能的设备，必须接入此。</li>
+<li>2～13、A0～A5，共18个针脚，都可以作为数字针脚，编号连起来，分别是2～19。</li>
+<li>13针脚只能为OUTPUT模式，只能作为输出端，不能用作输入端。</li>
+<li>A6、A7针脚只能用做模拟信号，不能用作数字信号。</li>
+<li>一般情况下，除了0、1、13、A6、A7这几个针脚比较特殊外，其他的针脚都可以按照正常功能使用。也就是说，2～12、A0～A5这17个针脚，基本可以放心使用。</li>
+</ul>
+<h4 id="2-4-选择原因"><a href="#2-4-选择原因" class="headerlink" title="2.4 选择原因"></a>2.4 选择原因</h4><p>功耗低，每个引脚的直流电流为40mA。符合本次设计的低功耗要求。</p>
+<p>体积小巧，相当于紧凑版的Arduino UNO，但功能齐全。它有22个数字I/O引脚，满足本次设计的需求，又不会显得太“大材小用”。</p>
+<p>价格比较便宜，从而提升了本次设计的性价比。</p>
+<p>社区活跃，相比于其他单片机和MCU，Arduino用户数量较多，并且开发环境简洁，IDE十分便于上手，操作方便,代码资源丰富。</p>
+<h3 id="3-传感器选型"><a href="#3-传感器选型" class="headerlink" title="3.传感器选型"></a>3.传感器选型</h3><h4 id="3-1温湿度传感器"><a href="#3-1温湿度传感器" class="headerlink" title="3.1温湿度传感器"></a>3.1温湿度传感器</h4><p><strong>DHT11</strong></p>
+<p><img src="/2019/06/11/移动气象站/1558184336321.png" alt="1558184336321"></p>
+<p>DHT11是一款有已校准数字信号输出的温湿度传感器。 其精度湿度+-5%RH， 温度+-2℃，量程湿度20-90%RH， 温度0~50℃。</p>
+<p>其特性如下：</p>
+<p>相对湿度和温度测量，全部校准，数字输出，卓越的长期稳定性，无需额外部件，超长的信号传输距离，超低能耗</p>
+<p>接线方式：</p>
+<p><img src="/2019/06/11/移动气象站/d50735fae6cd7b892f8a3c200f2442a7d8330eaa.jpg" alt="img"></p>
+<p><strong>DHT11模块</strong></p>
+<p><img src="/2019/06/11/移动气象站/timg.jpeg" alt="timg"></p>
+<p>即为DHT11的封装版本，数据端口带上拉电阻，可直接连入单片机使用：</p>
+<ul>
+<li><p>VCC   → 3.3V/5V电源正极</p>
+</li>
+<li><p>GND   →电源负极</p>
+</li>
+<li><p>DATA  →单片机IO口</p>
+</li>
+</ul>
+<h4 id="3-2-紫外线传感器"><a href="#3-2-紫外线传感器" class="headerlink" title="3.2 紫外线传感器"></a>3.2 紫外线传感器</h4><p><strong>GYML8511</strong></p>
+<p><img src="/2019/06/11/移动气象站/ML8511-1.JPG" alt="ML8511-1"></p>
+<p>该模块采用了通用的ML8511 UV传感器原件，可以用来检测室内或室外的紫外线密度。通过将光电流转化成电压的原理来检测UV强度，非常适合被被外部电路所采用。 ML8511可与UV光量成正比输出模拟电压（如下图）。由于可以输出电压，因此可以直接连接内建MCU的A/D数字/模拟转换器，无需光电转换电路。而且使用小型、薄型表面封装方式，适合于便携式设备用途。该模快还具备省电模式可达0.1uA，适合在智能可穿戴和手机等设备上使用。</p>
+<p><img src="/2019/06/11/移动气象站/1558229417061.png" alt="1558229417061"></p>
+<p>连接方式：</p>
+<p>VIN -&gt; 5V<br>OUT -&gt; A0<br>GND -&gt; GND<br>EN -&gt; 3.3V<br>3.3V -&gt; A1</p>
+<h4 id="3-3-PM2-5传感器"><a href="#3-3-PM2-5传感器" class="headerlink" title="3.3 PM2.5传感器"></a>3.3 PM2.5传感器</h4><p><strong>GP2Y1014AU粉尘传感器</strong></p>
+<p><img src="/2019/06/11/移动气象站/1558185606031.png" alt="1558185606031"></p>
+<p>该传感器用于检测空气中的细小颗粒，例如香烟烟雾；该装置包含一个红外发光二极管和一个光电晶体管，对角放置，用于检测空气中的反射光；该传感器具有很低的电流消耗（最大20mA，典型值为11mA），允许最大输入电压7VDC；输出的是一个正比于粉尘浓度（在一定区间内）的模拟电压，如下图，敏感度为0.5V/0.1mg/m^3</p>
+<p><img src="/2019/06/11/移动气象站/1558186643486.png" alt="1558186643486"></p>
+<p>原理图：</p>
+<p><img src="/2019/06/11/移动气象站/1558185841710.png" alt="1558185841710"></p>
+<p>连接方式：</p>
+<p>V-LED -&gt; 5V(150Ω resistor)</p>
+<p>LED-GND -&gt; GND</p>
+<p>LED -&gt; a Digital Pin</p>
+<p>S-GND -&gt; GND</p>
+<p>Vo -&gt; an Analog Pin</p>
+<p>Vcc -&gt;5V</p>
+<p>并且V-LED和LED-GND之间要添加220uF电解电容</p>
+<p><img src="/2019/06/11/移动气象站/1558185891132.png" alt="1558185891132"></p>
+<h4 id="3-4-GPS传感器"><a href="#3-4-GPS传感器" class="headerlink" title="3.4 GPS传感器"></a>3.4 GPS传感器</h4><p><strong>U-BLOX NEO-6M模组</strong></p>
+<p><img src="/2019/06/11/移动气象站/1558187612642.png" alt="1558187612642"></p>
+<p>模组特性：</p>
+<p>1, 模块采用U-BLOX NEO-6M模组,体积小巧,性能优异。                                              2, 模块增加放大电路,有利于无源陶瓷天线快速搜星。<br>3, 模块可通过串口进行各种参数设置,并可保存在EEPROM,使用方便。<br>4, 模块自带SMA接口,可以连接各种有源天线,适应能力强。带有IPEX接口,可以接有源陶瓷天线。<br>5, 模块兼容3.3V/5V电平,方便连接各种单片机系统。<br>6, 模块自带可充电后备电池,可以掉电保持星历数据。</p>
+<p>引脚说明：</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">VCC</td>
+<td align="center">电源(3.3V~5.0V)</td>
+</tr>
+<tr>
+<td align="center">GND</td>
+<td align="center">地</td>
+</tr>
+<tr>
+<td align="center">TXD</td>
+<td align="center">模块串口发送脚,可接单片机的RXD</td>
+</tr>
+<tr>
+<td align="center">RXD</td>
+<td align="center">模块串口接收脚,可接单片机的TXD</td>
+</tr>
+<tr>
+<td align="center">PPS</td>
+<td align="center">时钟脉冲输出脚</td>
+</tr>
+</tbody></table>
+<p>其中,PPS引脚同时连接到了模块自带了的状态指示灯:</p>
+<p>1, 常亮,表示模块已开始工作,但还未实现定位。<br>2, 闪烁(100ms灭,900ms亮),表示模块已经定位成功。</p>
+<p>连接单片机：</p>
+<p>VCC———————————– VCC(必须接)<br>GND———————————-GND(必须接)<br>TXD———————————–RXD(必须接)<br>RXD———————————–TXD(可不接)<br>PPS———————————–某个 IO(可不接)</p>
+<p>具体操作：</p>
+<p>该模组的串口返回数据均为NMEA语句，NMEA全称美国国家海洋电子协会（National Marine Electronics Association），在GPS领域，它是GPS制造商支持的标准数据格式。NMEA语句以$字符开头，每个数据字段用逗号分隔。消息的类型由第一个逗号前的字符指示。</p>
+<p>由于自己解析NMEA数据代码量比较大，且容易忽略很多细节，为代码维护带来一定困难，所以选择使用TinyGPS ++库解析NMEA语句，这个库使得我们可以以一种有用和容易理解的格式获得位置信息变得简单。并且该模组使用一组串口传递信息，而Arduino Nano只有一组串口（硬串口），考虑到接下来的通信模组也需要一组串口，因此，GPS模组应用Arduino自带的软串口库来自定义一组软串口。</p>
+<p>首先需要导入所需的库：TinyGPSPlus和SoftwareSerial：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;TinyGPS++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SoftwareSerial.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>申请一组I/O作为软串口：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> RXPin = <span class="number">4</span>, TXPin = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>创建一个TinyGPS ++对象，并在之前定义的引脚启动串行连接：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TinyGPSPlus GPS;</span><br><span class="line">SoftwareSerial ss（RXPin，TXPin）;</span><br></pre></td></tr></table></figure>
+
+<p>这之后获取纬度和经度很简单，分别使用gps.location.lat（）和gps.location.lng（）。同时也可以获取时间（年月日、时分秒）等其他信息。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gps.date.year()</span><br><span class="line">gps.date.month()</span><br><span class="line">gps.date.day()</span><br><span class="line">gps.time.hour()</span><br><span class="line">gps.time.minute()</span><br><span class="line">gps.time.second()</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-通信模组选型"><a href="#4-通信模组选型" class="headerlink" title="4.通信模组选型"></a>4.通信模组选型</h3><p><strong>YNH-M5310A核心板</strong></p>
+<p><img src="/2019/06/11/移动气象站/1558194529201.png" alt="1558194529201"></p>
+<p>YNH-M5310A核心板基于中移物联NBIOT M5310A全网通模块，该模块支持电信、移动、联通网络，支持TCP/UDP/MQTT/NOENET等协议，是目前市占率非常高的一款模组。</p>
+<p>M5310A全网通模块</p>
+<p><img src="/2019/06/11/移动气象站/1558230094866.png" alt="1558230094866"></p>
+<p>M5310-A 模块是一款工业级的多频段 NB-IOT 无线模块,其工作频段是 Band3、 Band 5、 Band 8。它主要应用于低功耗的数据传输业务,满足 3gpp Release14 标准。M5310-A 模块采用了低功耗技术,电流功耗在 PSM 模式下低至 3 uA。NB-IOT 主要用到两种节电技术,分别是 PSM ( Power Saving Mode)和 eDRX(Extended DRX)。<br>模块在 PSM 下的最大耗流为 5uA。 PSM 主要目的是降低模块功耗,延长电池的供电时间。下图显示了模块在不同模式下的功耗。</p>
+<p><img src="/2019/06/11/移动气象站/1558230347837.png" alt="1558230347837"></p>
+<p>eDRX (增强型不连续接收)技术,是通过延长 DRX 的时间,减少了终端的 DRX 次数和频率,从而达到节电的目的。节电效果相比 PSM 要差些,但相对于 PSM, eDRX 提高了下行通信链路的可到达性,较为适合保持长连接等的应用。</p>
+<p>M5310-A 模块可以工作在三个频段之下，正是它全网通的原因。</p>
+<table>
+<thead>
+<tr>
+<th align="center">频带</th>
+<th align="center">接收频率</th>
+<th align="center">发射频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Band8</td>
+<td align="center">925~960MHz</td>
+<td align="center">880~915MHz</td>
+</tr>
+<tr>
+<td align="center">Band5</td>
+<td align="center">865~894MHz</td>
+<td align="center">824~849MHz</td>
+</tr>
+<tr>
+<td align="center">Band3</td>
+<td align="center">1805~1880MHZ</td>
+<td align="center">1710~1785MHZ</td>
+</tr>
+</tbody></table>
+<p>由于已经有厂家将该模块进行封装成为核心板，因此只要分析核心板的引脚和使用方式即可。</p>
+<p>核心板引脚说明：</p>
+<table>
+<thead>
+<tr>
+<th align="center">管脚</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DTX</td>
+<td align="center">NB模块DEBUG UART接收</td>
+</tr>
+<tr>
+<td align="center">RI</td>
+<td align="center">信息上报时输出低电平，输出完成恢复高电平，可悬空</td>
+</tr>
+<tr>
+<td align="center">RX</td>
+<td align="center">模块接收端，接Arduino TX发送引脚</td>
+</tr>
+<tr>
+<td align="center">TX</td>
+<td align="center">模块发送端，接Arduino RX接收引脚</td>
+</tr>
+<tr>
+<td align="center">EN</td>
+<td align="center">拉低可以关闭整个模块电源，不用可悬空</td>
+</tr>
+<tr>
+<td align="center">RST</td>
+<td align="center">模块复位管脚，拉高硬件复位，不用则悬空</td>
+</tr>
+<tr>
+<td align="center">VCC</td>
+<td align="center">电源输入，3.3V/5V</td>
+</tr>
+<tr>
+<td align="center">GND</td>
+<td align="center">电源接地</td>
+</tr>
+</tbody></table>
+<p>核心板测试：</p>
+<p>使用USB转TTL工具对模块进行简单测试，串口工具的TX、RX、VCC、GND分别接模块的RX、TX、VCC、GND，使用串口调试工具发送AT指令即可实现简单的测试。</p>
+<p><img src="/2019/06/11/移动气象站/1558194570589.png" alt="1558194570589"></p>
+<p>A. AT<br>模块回 OK,表示正常<br>B. AT+NBAND?<br>获取模块支持的频段,模块回“+NBAND:5,8”,表示支持 B5 /B8 频段,其中 B5 是电信的,B8 是移动的频段,模块也支持其他频段<br>C. AT+CSQ<br>获取 NBIOT 信号强度,模块回“+CSQ:23,99”,前面一个十进制数表示信号前度,一般情况下要求高于 16（99表示没信号）,否则存在通信失败的情况。<br>D. AT+CEREG?<br>检查模块是否注网成功,模块回“+CEREG:0,1”表示注网成功,如果模块断电冷启动,可能刚刚开始需要一些时间进行注网<br>E. AT+CIMI<br>获取 SIM 卡的 CIMI 号,模块回 15 字节数据<br>F. AT+CGSN=1<br>获取设备的唯一标识码</p>
+<h3 id="5-云平台选择"><a href="#5-云平台选择" class="headerlink" title="5.云平台选择"></a>5.云平台选择</h3><p><strong>华为云OceanConnect IoT 平台</strong></p>
+<p>OceanConnect 是华为公司基于物联网、云计算和大数据等技术打造的开放生态环境。利用华为OceanConnect IoT平台,可以方便地将海量物联网终端连接到物联网云平台，实现设备和平台之间数据采集和命令下发的双向通信,对设备进行高效、可视化的管理,对数据进行整合分析,并通过调用平台面向行业强大的开放能力,快速构建创新的物联网业务。</p>
+<p><strong>平台优势：</strong></p>
+<p>敏捷易用的设备集成：广泛支持有线、无线多种网络接入方式,支持20多种IoT领域主流协议,预集成IoT领域主流厂商芯片/模组。<br>完备高效的设备管理：功能强大、界面友好的设备管理，提供完备的设备管理能力。<br>灵活开放的应用使能：开放设备管理、数据和规则等能力,面向智慧家庭、车联网、公共事业等领域的功能组件、数据分析能力。<br>高并发高可靠的云服务：支持亿级海量连接,业务可靠性达99.9%。端到端安全防护机制,基于设备级的认证、鉴权,针对低功耗安全传输协议(DTLS)优化,完善的应用级访问权限控制。</p>
+<p><strong>选择原因：</strong></p>
+<p>接入操作方便，数据易于获取，开发资料完善，开发免费</p>
+<p><strong>操作过程：</strong></p>
+<p>1.申请账户，创建产品</p>
+<p>2.编写Profile插件</p>
+<p>定义上报数据的属性，包括数据类型，范围，单位等。</p>
+<p><img src="/2019/06/11/移动气象站/1558236816792.png" alt="1558236816792"></p>
+<p>本次移动气象站设计，上报的数据共有11个，分别是：温度、湿度、PM2.5浓度、紫外线强度、经度（用于显示）、纬度（用于显示）、电压值（检测Arduino Nano的工作状况）、EorW（用于判断东西半球）、NorS（用于判断南北半球）、LongLong（精确的经度值，小数点后6位，用于准确定位）、LongLat（精确的纬度值，小数点后7位，用于准确定位）</p>
+<p>3.编写编解码插件</p>
+<p>用于对上报的码流数据进行解析，规定好上报各个数据的位长，通过此编解码插件即可对上报的数据进行划分，然后将16进制的ASCII值转换为对应的字符。之后保存并部署插件即可。</p>
+<p><img src="/2019/06/11/移动气象站/1558237464902.png" alt="1558237464902"></p>
+<p><img src="/2019/06/11/移动气象站/1558237506432.png" alt="1558237506432"></p>
+<p>4.新增真实设备</p>
+<p>使用模块的 IMEI 号新增设备，可以通过 AT指令(“AT+CGSN=1”)获取模块的的 IMEI 号</p>
+<p>5.数据上报</p>
+<p>主要用到如下两条指令</p>
+<table>
+<thead>
+<tr>
+<th align="center">AT指令</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AT+NCDP=ip</td>
+<td align="center">配置服务器地址,其中 ip 地址在平台对接信息中可以找到(位于左侧应用–&gt;对接信息–&gt;设备接入信息–&gt;49.4.85.232:5683 (CoAP)),故AT+NCDP=49.4.85.232</td>
+</tr>
+<tr>
+<td align="center">AT+NMGS=length,data[,<seq_num>]</seq_num></td>
+<td align="center">发送数据指令, length 表示后续数据长度(10 进制表示,后续数据的字节长度),data 表示需要发送的数据</td>
+</tr>
+</tbody></table>
+<p><img src="/2019/06/11/移动气象站/1558238062125.png" alt="1558238062125"></p>
+<p>NBIOT 发送完毕,可以在云平台的设备历史数据中查看(左侧产品–&gt;设备管理–&gt;选择刚<br>刚上报的设备–&gt;历史数据)</p>
+<p>6.示例代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数据上报 每10s上报一次100*100ms</span></span><br><span class="line"> <span class="keyword">if</span>(i==<span class="number">100</span>)&#123;</span><br><span class="line"> i=<span class="number">0</span>;</span><br><span class="line"> <span class="keyword">float</span> msg0[<span class="number">7</span>];</span><br><span class="line"> msg0[<span class="number">0</span>]=(<span class="keyword">float</span>)DHT11.temperature;</span><br><span class="line"> msg0[<span class="number">1</span>]=(<span class="keyword">float</span>)DHT11.humidity;</span><br><span class="line"> msg0[<span class="number">2</span>]=(dustDensity&gt;<span class="number">0.0</span>)? dustDensity:<span class="number">0.0</span>;</span><br><span class="line"> msg0[<span class="number">3</span>]=(uvIntensity&gt;<span class="number">0.0</span>)? uvIntensity:<span class="number">0.0</span>;</span><br><span class="line"> msg0[<span class="number">4</span>]=gps.location.lng();</span><br><span class="line"> msg0[<span class="number">5</span>]=gps.location.lat();</span><br><span class="line"> msg0[<span class="number">6</span>]=v;</span><br><span class="line"> </span><br><span class="line"> String msg=<span class="string">""</span>;</span><br><span class="line"> <span class="keyword">char</span> tmp[<span class="number">15</span>];</span><br><span class="line"></span><br><span class="line"> <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">7</span>;++j)</span><br><span class="line"> &#123;    </span><br><span class="line">   <span class="keyword">if</span> (msg0[j]&lt;=<span class="number">0</span>) dtostrf(<span class="number">0.000</span>,<span class="number">1</span>,<span class="number">3</span>,tmp);</span><br><span class="line">   <span class="keyword">if</span> (msg0[j]&gt;<span class="number">0</span> &amp;&amp; msg0[j]&lt;<span class="number">10</span>) dtostrf(msg0[j],<span class="number">1</span>,<span class="number">3</span>,tmp);</span><br><span class="line">   <span class="keyword">if</span> (msg0[j]&gt;=<span class="number">10</span> &amp;&amp; msg0[j]&lt;<span class="number">100</span>) dtostrf(msg0[j],<span class="number">2</span>,<span class="number">2</span>,tmp);</span><br><span class="line">   <span class="keyword">if</span> (msg0[j]&gt;=<span class="number">100</span>) dtostrf(msg0[j],<span class="number">3</span>,<span class="number">1</span>,tmp);</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">5</span>;++k)</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="keyword">if</span> (tmp[k]==<span class="string">'.'</span>) msg=msg+<span class="string">"2E"</span>;</span><br><span class="line">     <span class="keyword">else</span> msg=msg+<span class="string">'3'</span>+tmp[k];  </span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">memset</span>(tmp,<span class="number">0</span>,<span class="number">15</span>*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">if</span>(gps.location.lng()!=<span class="number">0.0</span>)  msg=msg+<span class="string">"454E"</span>;   <span class="comment">//EN</span></span><br><span class="line"> <span class="keyword">else</span> msg=msg+<span class="string">"5F5F"</span>;   <span class="comment">//下划线</span></span><br><span class="line"> <span class="keyword">if</span>(gps.location.lng()!=<span class="number">0.0</span>)</span><br><span class="line"> &#123;</span><br><span class="line"> dtostrf(gps.location.lng(),<span class="number">3</span>,<span class="number">6</span>,tmp);</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">10</span>;++k)</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="keyword">if</span> (tmp[k]==<span class="string">'.'</span>) msg=msg+<span class="string">"2E"</span>;</span><br><span class="line">     <span class="keyword">else</span> msg=msg+<span class="string">'3'</span>+tmp[k];  </span><br><span class="line">   &#125;</span><br><span class="line"> <span class="built_in">memset</span>(tmp,<span class="number">0</span>,<span class="number">15</span>*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span>(gps.location.lat()!=<span class="number">0.0</span>)</span><br><span class="line"> &#123;</span><br><span class="line"> dtostrf(gps.location.lat(),<span class="number">2</span>,<span class="number">7</span>,tmp);</span><br><span class="line"> <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;<span class="number">10</span>;++k)</span><br><span class="line">   &#123;</span><br><span class="line">     <span class="keyword">if</span> (tmp[k]==<span class="string">'.'</span>) msg=msg+<span class="string">"2E"</span>;</span><br><span class="line">     <span class="keyword">else</span> msg=msg+<span class="string">'3'</span>+tmp[k];  </span><br><span class="line">   &#125;</span><br><span class="line"> <span class="built_in">memset</span>(tmp,<span class="number">0</span>,<span class="number">15</span>*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">if</span> (msg.length()==<span class="number">57</span>*<span class="number">2</span>)</span><br><span class="line"> Serial.println(String(<span class="string">""</span>)+<span class="string">"AT+NMGS=57,"</span>+msg);</span><br><span class="line"> <span class="keyword">if</span> (msg.length()==<span class="number">37</span>*<span class="number">2</span>)</span><br><span class="line"> Serial.println(String(<span class="string">""</span>)+<span class="string">"AT+NMGS=37,"</span>+msg);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-前端开发测试"><a href="#6-前端开发测试" class="headerlink" title="6.前端开发测试"></a>6.前端开发测试</h3><h3 id="7-PCB相关，还有盒子？"><a href="#7-PCB相关，还有盒子？" class="headerlink" title="7.PCB相关，还有盒子？"></a>7.PCB相关，还有盒子？</h3><h3 id="8-作品展示"><a href="#8-作品展示" class="headerlink" title="8.作品展示"></a>8.作品展示</h3><h2 id="和竞赛要求相比，还要补充"><a href="#和竞赛要求相比，还要补充" class="headerlink" title="和竞赛要求相比，还要补充"></a>和竞赛要求相比，还要补充</h2><h3 id="设计需求——随便编，像是物联网，天气预报，便携啥的"><a href="#设计需求——随便编，像是物联网，天气预报，便携啥的" class="headerlink" title="设计需求——随便编，像是物联网，天气预报，便携啥的"></a>设计需求——随便编，像是物联网，天气预报，便携啥的</h3><h3 id="特色创新——编"><a href="#特色创新——编" class="headerlink" title="特色创新——编"></a>特色创新——编</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/11/hello-world/" rel="next" title="world">
+                <i class="fa fa-chevron-left"></i> world
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/26/change-computer/" rel="prev" title="change computer">
+                change computer <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
 
     <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+      
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+          </div>
+          
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/5.jpeg" alt="Twang">
+            
+              <p class="site-author-name" itemprop="name">Twang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-总体构思"><span class="nav-number">1.</span> <span class="nav-text">1.总体构思</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-单片机选型"><span class="nav-number">2.</span> <span class="nav-text">2.单片机选型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Arduino-Nano简介"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Arduino Nano简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Arduino-Nano技术参数"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Arduino Nano技术参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Arduino-Nano引脚图"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Arduino Nano引脚图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-选择原因"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 选择原因</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-传感器选型"><span class="nav-number">3.</span> <span class="nav-text">3.传感器选型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1温湿度传感器"><span class="nav-number">3.1.</span> <span class="nav-text">3.1温湿度传感器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-紫外线传感器"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 紫外线传感器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-PM2-5传感器"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 PM2.5传感器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-GPS传感器"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 GPS传感器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-通信模组选型"><span class="nav-number">4.</span> <span class="nav-text">4.通信模组选型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-云平台选择"><span class="nav-number">5.</span> <span class="nav-text">5.云平台选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-前端开发测试"><span class="nav-number">6.</span> <span class="nav-text">6.前端开发测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-PCB相关，还有盒子？"><span class="nav-number">7.</span> <span class="nav-text">7.PCB相关，还有盒子？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-作品展示"><span class="nav-number">8.</span> <span class="nav-text">8.作品展示</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#和竞赛要求相比，还要补充"><span class="nav-number"></span> <span class="nav-text">和竞赛要求相比，还要补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计需求——随便编，像是物联网，天气预报，便携啥的"><span class="nav-number">1.</span> <span class="nav-text">设计需求——随便编，像是物联网，天气预报，便携啥的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特色创新——编"><span class="nav-number">2.</span> <span class="nav-text">特色创新——编</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Twang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
