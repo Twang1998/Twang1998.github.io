@@ -75,6 +75,28 @@
   </entry>
   
   <entry>
+    <title>conda</title>
+    <link href="http://yoursite.com/2019/12/15/conda/"/>
+    <id>http://yoursite.com/2019/12/15/conda/</id>
+    <published>2019-12-14T16:00:00.000Z</published>
+    <updated>2019-12-15T13:09:33.419Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Python</strong>环境管理工具<strong>conda</strong>学习记录</p><a id="more"></a><h3 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h3><p> conda create -n tensorflow python=3.5</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;环境管理工具&lt;strong&gt;conda&lt;/strong&gt;学习记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="conda envs" scheme="http://yoursite.com/tags/conda-envs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>args</title>
     <link href="http://yoursite.com/2019/12/15/args/"/>
     <id>http://yoursite.com/2019/12/15/args/</id>
@@ -97,24 +119,66 @@
   </entry>
   
   <entry>
-    <title>conda</title>
-    <link href="http://yoursite.com/2019/12/15/conda/"/>
-    <id>http://yoursite.com/2019/12/15/conda/</id>
+    <title>git for windows</title>
+    <link href="http://yoursite.com/2019/12/15/git/"/>
+    <id>http://yoursite.com/2019/12/15/git/</id>
     <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:09:33.419Z</updated>
+    <updated>2019-12-15T13:09:53.391Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>Python</strong>环境管理工具<strong>conda</strong>学习记录</p><a id="more"></a><h3 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h3><p> conda create -n tensorflow python=3.5</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>Git</strong>学习记录</p><a id="more"></a><h3 id="git（windows）"><a href="#git（windows）" class="headerlink" title="git（windows）"></a>git（windows）</h3><p>参考：<a href="https://blog.csdn.net/u014103733/article/details/79190004" target="_blank" rel="noopener">https://blog.csdn.net/u014103733/article/details/79190004</a></p><p>1.安装git，没啥好说的</p><p>2.配置一下用户名，邮箱</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config--global user.name &quot;your_account&quot;</span><br><span class="line"></span><br><span class="line">git config –globaluser.email youremail@example.com</span><br></pre></td></tr></table></figure><p>3.生成SSH</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C  371515509@qq.com</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/37151/.ssh/id_rsa):</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in /c/Users/37151/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/37151/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:cCDnlgva340pnFpZ6y78Y9HjBtsobzstyjSm7FKO3nA 371515509@qq.com</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 3072]----+</span><br><span class="line">|    . o          |</span><br><span class="line">|     + o         |</span><br><span class="line">|    . = .        |</span><br><span class="line">|   o o +         |</span><br><span class="line">|  . . . S.       |</span><br><span class="line">|    .o =o=o      |</span><br><span class="line">|  .+E.@ =O..     |</span><br><span class="line">|  o=.B++O =      |</span><br><span class="line">| ..o* oX**       |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure><p>4.github添加</p><p>没啥好说的，title随意</p><p>4.5   </p><p>5.可以git clone 了</p><p>clone 自动绑定远程仓库，接下来可以搞事了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>问题不大</p><p>6.不clone的话</p><p>从初始化仓库开始</p><p><a href="https://www.jianshu.com/p/8e46d88db49e" target="_blank" rel="noopener">https://www.jianshu.com/p/8e46d88db49e</a></p><p>①初始化本地仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><p>②将所有文件添加到本地仓库（add 后面的空格+点 不能少）</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br></pre></td></tr></table></figure><p>③将项目提交到本地git仓库 （“first commit” 是备注信息 自己随便写）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"first commit"</span></span><br></pre></td></tr></table></figure><p>④本地git仓库与远程仓库关联（git@<a href="https://links.jianshu.com/go?to=xx.xx.xx.xx%3Arepos%2Fxxx%2Fxxx%2Fxxx.git" target="_blank" rel="noopener">xx.xx.xx.xx:repos/xxx/xxx/xxx.git</a> 是远程仓库地址）</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add</span> origin git@xx.xx.xx.xx:repos/xxx/xxx/xxx.git</span><br></pre></td></tr></table></figure><p>⑤将项目推送到远程仓库(master是分支名 -f 强制推送)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master -f 或者 git push origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><p>执行⑤出错的话 执行下面命令后 在执行⑤</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure><p>⑥强拉失败 执行如下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure><p>ssh-add ~./.ssh/id_rsa</p><p>git remote rm origin</p><p>git remote add urlcopy</p><p>echo *** &gt;&gt;.gitignore</p><p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> </p><p><strong>远程仓库</strong></p><p><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8</a></p><h3 id="查看当前的远程库"><a href="#查看当前的远程库" class="headerlink" title="查看当前的远程库"></a><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用#查看当前的远程库" target="_blank" rel="noopener">查看当前的远程库</a></h3><p>要查看当前配置有哪些远程仓库，可以用 <code>git remote</code> 命令，它会列出每个远程库的简短名字。在克隆完某个项目后，至少可以看到一个名为<strong>origin 的远程库</strong>，Git 默认使用这个名字来标识你所克隆的原始仓库：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git://github.com/schacon/ticgit.git</span><br><span class="line">Cloning into &apos;ticgit&apos;...</span><br><span class="line">remote: Reusing existing pack: 1857, done.</span><br><span class="line">remote: Total 1857 (delta 0), reused 0 (delta 0)</span><br><span class="line">Receiving objects: 100% (1857/1857), 374.35 KiB | 193.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (772/772), done.</span><br><span class="line">Checking connectivity... done.</span><br><span class="line">$ cd ticgit</span><br><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure><p>也可以加上 <code>-v</code> 选项（译注：此为 <code>--verbose</code> 的简写，取首字母），显示对应的克隆地址：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git://github.com/schacon/ticgit.git (fetch)</span><br><span class="line">origin  git://github.com/schacon/ticgit.git (push)</span><br></pre></td></tr></table></figure><p>如果有多个远程仓库，此命令将全部列出。比如在我的 Grit 项目中，可以看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cd grit</span><br><span class="line">$ git remote -v</span><br><span class="line">bakkdoor  git://github.com/bakkdoor/grit.git</span><br><span class="line">cho45     git://github.com/cho45/grit.git</span><br><span class="line">defunkt   git://github.com/defunkt/grit.git</span><br><span class="line">koke      git://github.com/koke/grit.git</span><br><span class="line">origin    git@github.com:mojombo/grit.git</span><br></pre></td></tr></table></figure><p>这样一来，我就可以非常轻松地从这些用户的仓库中，拉取他们的提交到本地。请注意，上面列出的地址只有 origin 用的是 SSH URL 链接，所以也只有这个仓库我能推送数据上去（我们会在第四章解释原因）。</p><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用#添加远程仓库" target="_blank" rel="noopener">添加远程仓库</a></h3><p>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用，运行 <code>git remote add [shortname] [url]</code>：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br><span class="line">$ git remote add pb git://github.com/paulboone/ticgit.git</span><br><span class="line">$ git remote -v</span><br><span class="line">origin  git://github.com/schacon/ticgit.git</span><br><span class="line">pb  git://github.com/paulboone/ticgit.git</span><br></pre></td></tr></table></figure><p>现在可以用字符串 <code>pb</code> 指代对应的仓库地址了。</p><p><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5</a>  牛批</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;环境管理工具&lt;strong&gt;conda&lt;/strong&gt;学习记录&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;学习记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tkinter</title>
+    <link href="http://yoursite.com/2019/12/15/tkinter/"/>
+    <id>http://yoursite.com/2019/12/15/tkinter/</id>
+    <published>2019-12-14T16:00:00.000Z</published>
+    <updated>2019-12-15T13:12:18.266Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Python</strong>中<strong>tkinter</strong>模块学习记录</p><a id="more"></a><p>tkinter 大事记</p><p>tkinter用法及在Python2.X和Python3.X中的不同</p><p><strong>一.导入方式：</strong><br>　　Python2.x:</p><p>　　　　from Tkinter import *</p><p>　　Python3.x:</p><p>　　　　from tkinter import *</p><p><strong>二.打开文件框：</strong><br>　　Python2.X：</p><p>　　　　import tkFileDialog</p><p>　　　　filename = tkFileDialog.askopenfilename(filetypes=[(“bmp格式”.decode(‘gbk’),”bmp”)])</p><p>　　　　#注意：Python2.X会有中文乱码问题，需要在”中文”后加.decode(‘gbk’) 。Python3.X则不需要</p><p>　　　　这里可以加入属性： initialdir 设置默认初始路径。即：</p><p>　　　　FileName = tkFileDialog.askopenfilename(filetypes=[(“bmp格式”.decode(‘gbk’),”bmp”)], initialdir = ‘E:’)</p><p>　　Python3.X：</p><p>　　　　import tkinter.filedialog</p><p>　　　　filename=tkinter.filedialog.askopenfilename(filetypes=[(“bmp格式”,”bmp”)])</p><p><strong>三.对话框：</strong><br>　　Python2.X：</p><p>　　　　import tkFileDialog</p><p>　　　　tkinter.MessageBox.showinfo(title=’中文标题’.decode(‘gbk’), message=’XXX’) #注意:中文要加.decode(‘gbk’)</p><p>　　Python3.X：</p><p>　　　　import tkinter.messagebox</p><p>　　　　tkinter.messagebox.showinfo(title=’XXX’,message=’XXX’)</p><p><strong>四.下拉列表：</strong><br>　　Python2.X：</p><p>　　　　import ttk</p><p>　　　　#注意：如果写from ttk import * 会影响Label的属性，这里可能Label会自动调用ttk里的Label？猜测而已</p><p>　　Python3.X：</p><p>　　　　from tkinter import ttk</p><p>　　　　用法一样：</p><p>　　　　　　myComboList = [‘AAA’,’BBB’,]</p><p>　　　　　　myCombox = ttk.Combobox(root, values=myComboList )</p><p>　　　　　　myCombox .pack()</p><p>mac 下 python3 应用tkinter 有点问题</p><p>通过python2解决</p><p>通过brew管理Python环境</p><p>brew install python2</p><p>brew install python3</p><p>pip 对应 python2 pip3 对应python3</p><p>Linux 下，</p><p>sudo apt-get install python3-tk</p><p>即可python3+tkinter正常使用</p><p>csv -&gt; unicodecsv(没有newline属性)</p><p>filename重排序</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;中&lt;strong&gt;tkinter&lt;/strong&gt;模块学习记录&lt;/p&gt;
     
     </summary>
     
       <category term="python" scheme="http://yoursite.com/categories/python/"/>
     
     
-      <category term="conda envs" scheme="http://yoursite.com/tags/conda-envs/"/>
+      <category term="tkinter" scheme="http://yoursite.com/tags/tkinter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode ssh</title>
+    <link href="http://yoursite.com/2019/12/15/vscode_ssh/"/>
+    <id>http://yoursite.com/2019/12/15/vscode_ssh/</id>
+    <published>2019-12-14T16:00:00.000Z</published>
+    <updated>2019-12-15T13:40:19.430Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>vscode</strong> 配置<strong>ssh</strong></p><a id="more"></a><h4 id="vscode-ssh"><a href="#vscode-ssh" class="headerlink" title="vscode ssh"></a>vscode ssh</h4><h4 id="1-下载插件"><a href="#1-下载插件" class="headerlink" title="1.下载插件"></a>1.下载插件</h4><p><img src="/2019/12/15/vscode_ssh/image-20191211214809208.png" alt="image-20191211214809208"></p><h4 id="2-相应设置"><a href="#2-相应设置" class="headerlink" title="2.相应设置"></a>2.相应设置</h4><p> Remote-SSH:Settings，设置Remote.SSH:Show Login Terminal为true </p><h4 id="3-连接"><a href="#3-连接" class="headerlink" title="3.连接"></a>3.连接</h4><p><img src="/2019/12/15/vscode_ssh/image-20191211214937667.png" alt="image-20191211214937667"></p><p>点击齿轮</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215010706.png" alt="image-20191211215010706"></p><p>选第一个</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215044636.png" alt="image-20191211215044636"></p><p>修改hostname 和 user 并保存</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215145528.png" alt="image-20191211215145528"></p><p>右键连接。</p><p>输入密码登录</p><p>打开新的终端 就是 bash</p><p>左侧可以查看服务器目录</p><p>可以下载文件</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;vscode&lt;/strong&gt; 配置&lt;strong&gt;ssh&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="vscode" scheme="http://yoursite.com/categories/vscode/"/>
+    
+    
+      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
     
   </entry>
   
@@ -159,70 +223,6 @@
     
     
       <category term="opencv" scheme="http://yoursite.com/tags/opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tkinter</title>
-    <link href="http://yoursite.com/2019/12/15/tkinter/"/>
-    <id>http://yoursite.com/2019/12/15/tkinter/</id>
-    <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:12:18.266Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Python</strong>中<strong>tkinter</strong>模块学习记录</p><a id="more"></a><p>tkinter 大事记</p><p>tkinter用法及在Python2.X和Python3.X中的不同</p><p><strong>一.导入方式：</strong><br>　　Python2.x:</p><p>　　　　from Tkinter import *</p><p>　　Python3.x:</p><p>　　　　from tkinter import *</p><p><strong>二.打开文件框：</strong><br>　　Python2.X：</p><p>　　　　import tkFileDialog</p><p>　　　　filename = tkFileDialog.askopenfilename(filetypes=[(“bmp格式”.decode(‘gbk’),”bmp”)])</p><p>　　　　#注意：Python2.X会有中文乱码问题，需要在”中文”后加.decode(‘gbk’) 。Python3.X则不需要</p><p>　　　　这里可以加入属性： initialdir 设置默认初始路径。即：</p><p>　　　　FileName = tkFileDialog.askopenfilename(filetypes=[(“bmp格式”.decode(‘gbk’),”bmp”)], initialdir = ‘E:’)</p><p>　　Python3.X：</p><p>　　　　import tkinter.filedialog</p><p>　　　　filename=tkinter.filedialog.askopenfilename(filetypes=[(“bmp格式”,”bmp”)])</p><p><strong>三.对话框：</strong><br>　　Python2.X：</p><p>　　　　import tkFileDialog</p><p>　　　　tkinter.MessageBox.showinfo(title=’中文标题’.decode(‘gbk’), message=’XXX’) #注意:中文要加.decode(‘gbk’)</p><p>　　Python3.X：</p><p>　　　　import tkinter.messagebox</p><p>　　　　tkinter.messagebox.showinfo(title=’XXX’,message=’XXX’)</p><p><strong>四.下拉列表：</strong><br>　　Python2.X：</p><p>　　　　import ttk</p><p>　　　　#注意：如果写from ttk import * 会影响Label的属性，这里可能Label会自动调用ttk里的Label？猜测而已</p><p>　　Python3.X：</p><p>　　　　from tkinter import ttk</p><p>　　　　用法一样：</p><p>　　　　　　myComboList = [‘AAA’,’BBB’,]</p><p>　　　　　　myCombox = ttk.Combobox(root, values=myComboList )</p><p>　　　　　　myCombox .pack()</p><p>mac 下 python3 应用tkinter 有点问题</p><p>通过python2解决</p><p>通过brew管理Python环境</p><p>brew install python2</p><p>brew install python3</p><p>pip 对应 python2 pip3 对应python3</p><p>Linux 下，</p><p>sudo apt-get install python3-tk</p><p>即可python3+tkinter正常使用</p><p>csv -&gt; unicodecsv(没有newline属性)</p><p>filename重排序</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;中&lt;strong&gt;tkinter&lt;/strong&gt;模块学习记录&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="tkinter" scheme="http://yoursite.com/tags/tkinter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git for windows</title>
-    <link href="http://yoursite.com/2019/12/15/git/"/>
-    <id>http://yoursite.com/2019/12/15/git/</id>
-    <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:09:53.391Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Git</strong>学习记录</p><a id="more"></a><h3 id="git（windows）"><a href="#git（windows）" class="headerlink" title="git（windows）"></a>git（windows）</h3><p>参考：<a href="https://blog.csdn.net/u014103733/article/details/79190004" target="_blank" rel="noopener">https://blog.csdn.net/u014103733/article/details/79190004</a></p><p>1.安装git，没啥好说的</p><p>2.配置一下用户名，邮箱</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config--global user.name &quot;your_account&quot;</span><br><span class="line"></span><br><span class="line">git config –globaluser.email youremail@example.com</span><br></pre></td></tr></table></figure><p>3.生成SSH</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C  371515509@qq.com</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/37151/.ssh/id_rsa):</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in /c/Users/37151/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/37151/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:cCDnlgva340pnFpZ6y78Y9HjBtsobzstyjSm7FKO3nA 371515509@qq.com</span><br><span class="line">The key&apos;s randomart image is:</span><br><span class="line">+---[RSA 3072]----+</span><br><span class="line">|    . o          |</span><br><span class="line">|     + o         |</span><br><span class="line">|    . = .        |</span><br><span class="line">|   o o +         |</span><br><span class="line">|  . . . S.       |</span><br><span class="line">|    .o =o=o      |</span><br><span class="line">|  .+E.@ =O..     |</span><br><span class="line">|  o=.B++O =      |</span><br><span class="line">| ..o* oX**       |</span><br><span class="line">+----[SHA256]-----+</span><br></pre></td></tr></table></figure><p>4.github添加</p><p>没啥好说的，title随意</p><p>4.5   </p><p>5.可以git clone 了</p><p>clone 自动绑定远程仓库，接下来可以搞事了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>问题不大</p><p>6.不clone的话</p><p>从初始化仓库开始</p><p><a href="https://www.jianshu.com/p/8e46d88db49e" target="_blank" rel="noopener">https://www.jianshu.com/p/8e46d88db49e</a></p><p>①初始化本地仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><p>②将所有文件添加到本地仓库（add 后面的空格+点 不能少）</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> .</span><br></pre></td></tr></table></figure><p>③将项目提交到本地git仓库 （“first commit” 是备注信息 自己随便写）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"first commit"</span></span><br></pre></td></tr></table></figure><p>④本地git仓库与远程仓库关联（git@<a href="https://links.jianshu.com/go?to=xx.xx.xx.xx%3Arepos%2Fxxx%2Fxxx%2Fxxx.git" target="_blank" rel="noopener">xx.xx.xx.xx:repos/xxx/xxx/xxx.git</a> 是远程仓库地址）</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add</span> origin git@xx.xx.xx.xx:repos/xxx/xxx/xxx.git</span><br></pre></td></tr></table></figure><p>⑤将项目推送到远程仓库(master是分支名 -f 强制推送)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master -f 或者 git push origin master</span><br><span class="line"></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><p>执行⑤出错的话 执行下面命令后 在执行⑤</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure><p>⑥强拉失败 执行如下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure><p>ssh-add ~./.ssh/id_rsa</p><p>git remote rm origin</p><p>git remote add urlcopy</p><p>echo *** &gt;&gt;.gitignore</p><p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> </p><p><strong>远程仓库</strong></p><p><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8</a></p><h3 id="查看当前的远程库"><a href="#查看当前的远程库" class="headerlink" title="查看当前的远程库"></a><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用#查看当前的远程库" target="_blank" rel="noopener">查看当前的远程库</a></h3><p>要查看当前配置有哪些远程仓库，可以用 <code>git remote</code> 命令，它会列出每个远程库的简短名字。在克隆完某个项目后，至少可以看到一个名为<strong>origin 的远程库</strong>，Git 默认使用这个名字来标识你所克隆的原始仓库：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git://github.com/schacon/ticgit.git</span><br><span class="line">Cloning into &apos;ticgit&apos;...</span><br><span class="line">remote: Reusing existing pack: 1857, done.</span><br><span class="line">remote: Total 1857 (delta 0), reused 0 (delta 0)</span><br><span class="line">Receiving objects: 100% (1857/1857), 374.35 KiB | 193.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (772/772), done.</span><br><span class="line">Checking connectivity... done.</span><br><span class="line">$ cd ticgit</span><br><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure><p>也可以加上 <code>-v</code> 选项（译注：此为 <code>--verbose</code> 的简写，取首字母），显示对应的克隆地址：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git://github.com/schacon/ticgit.git (fetch)</span><br><span class="line">origin  git://github.com/schacon/ticgit.git (push)</span><br></pre></td></tr></table></figure><p>如果有多个远程仓库，此命令将全部列出。比如在我的 Grit 项目中，可以看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ cd grit</span><br><span class="line">$ git remote -v</span><br><span class="line">bakkdoor  git://github.com/bakkdoor/grit.git</span><br><span class="line">cho45     git://github.com/cho45/grit.git</span><br><span class="line">defunkt   git://github.com/defunkt/grit.git</span><br><span class="line">koke      git://github.com/koke/grit.git</span><br><span class="line">origin    git@github.com:mojombo/grit.git</span><br></pre></td></tr></table></figure><p>这样一来，我就可以非常轻松地从这些用户的仓库中，拉取他们的提交到本地。请注意，上面列出的地址只有 origin 用的是 SSH URL 链接，所以也只有这个仓库我能推送数据上去（我们会在第四章解释原因）。</p><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a><a href="https://git-scm.com/book/zh/v1/Git-基础-远程仓库的使用#添加远程仓库" target="_blank" rel="noopener">添加远程仓库</a></h3><p>要添加一个新的远程仓库，可以指定一个简单的名字，以便将来引用，运行 <code>git remote add [shortname] [url]</code>：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br><span class="line">$ git remote add pb git://github.com/paulboone/ticgit.git</span><br><span class="line">$ git remote -v</span><br><span class="line">origin  git://github.com/schacon/ticgit.git</span><br><span class="line">pb  git://github.com/paulboone/ticgit.git</span><br></pre></td></tr></table></figure><p>现在可以用字符串 <code>pb</code> 指代对应的仓库地址了。</p><p><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5</a>  牛批</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;学习记录&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vscode ssh</title>
-    <link href="http://yoursite.com/2019/12/15/vscode_ssh/"/>
-    <id>http://yoursite.com/2019/12/15/vscode_ssh/</id>
-    <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:40:19.430Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>vscode</strong> 配置<strong>ssh</strong></p><a id="more"></a><h4 id="vscode-ssh"><a href="#vscode-ssh" class="headerlink" title="vscode ssh"></a>vscode ssh</h4><h4 id="1-下载插件"><a href="#1-下载插件" class="headerlink" title="1.下载插件"></a>1.下载插件</h4><p><img src="/2019/12/15/vscode_ssh/image-20191211214809208.png" alt="image-20191211214809208"></p><h4 id="2-相应设置"><a href="#2-相应设置" class="headerlink" title="2.相应设置"></a>2.相应设置</h4><p> Remote-SSH:Settings，设置Remote.SSH:Show Login Terminal为true </p><h4 id="3-连接"><a href="#3-连接" class="headerlink" title="3.连接"></a>3.连接</h4><p><img src="/2019/12/15/vscode_ssh/image-20191211214937667.png" alt="image-20191211214937667"></p><p>点击齿轮</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215010706.png" alt="image-20191211215010706"></p><p>选第一个</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215044636.png" alt="image-20191211215044636"></p><p>修改hostname 和 user 并保存</p><p><img src="/2019/12/15/vscode_ssh/image-20191211215145528.png" alt="image-20191211215145528"></p><p>右键连接。</p><p>输入密码登录</p><p>打开新的终端 就是 bash</p><p>左侧可以查看服务器目录</p><p>可以下载文件</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;vscode&lt;/strong&gt; 配置&lt;strong&gt;ssh&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="vscode" scheme="http://yoursite.com/categories/vscode/"/>
-    
-    
-      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
     
   </entry>
   
