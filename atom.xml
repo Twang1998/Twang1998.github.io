@@ -75,28 +75,6 @@
   </entry>
   
   <entry>
-    <title>conda</title>
-    <link href="http://yoursite.com/2019/12/15/conda/"/>
-    <id>http://yoursite.com/2019/12/15/conda/</id>
-    <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:09:33.419Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Python</strong>环境管理工具<strong>conda</strong>学习记录</p><a id="more"></a><h3 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h3><p> conda create -n tensorflow python=3.5</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;环境管理工具&lt;strong&gt;conda&lt;/strong&gt;学习记录&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="conda envs" scheme="http://yoursite.com/tags/conda-envs/"/>
-    
-  </entry>
-  
-  <entry>
     <title>args</title>
     <link href="http://yoursite.com/2019/12/15/args/"/>
     <id>http://yoursite.com/2019/12/15/args/</id>
@@ -119,6 +97,28 @@
   </entry>
   
   <entry>
+    <title>conda</title>
+    <link href="http://yoursite.com/2019/12/15/conda/"/>
+    <id>http://yoursite.com/2019/12/15/conda/</id>
+    <published>2019-12-14T16:00:00.000Z</published>
+    <updated>2019-12-15T13:09:33.419Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Python</strong>环境管理工具<strong>conda</strong>学习记录</p><a id="more"></a><h3 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h3><p> conda create -n tensorflow python=3.5</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;环境管理工具&lt;strong&gt;conda&lt;/strong&gt;学习记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="conda envs" scheme="http://yoursite.com/tags/conda-envs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git for windows</title>
     <link href="http://yoursite.com/2019/12/15/git/"/>
     <id>http://yoursite.com/2019/12/15/git/</id>
@@ -135,6 +135,28 @@
     
       <category term="git" scheme="http://yoursite.com/categories/git/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>opencv</title>
+    <link href="http://yoursite.com/2019/12/15/opencv/"/>
+    <id>http://yoursite.com/2019/12/15/opencv/</id>
+    <published>2019-12-14T16:00:00.000Z</published>
+    <updated>2019-12-15T13:10:26.762Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Python</strong>中<strong>opencv</strong>模块学习记录</p><a id="more"></a><h3 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h3><h4 id="1-视频"><a href="#1-视频" class="headerlink" title="1.视频"></a>1.视频</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> cap.isOpened():</span><br><span class="line">    print(<span class="string">"Cannot open camera"</span>)</span><br><span class="line">    exit()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># Capture frame-by-frame</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="comment"># if frame is read correctly ret is True</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ret:</span><br><span class="line">        print(<span class="string">"Can't receive frame (stream end?). Exiting ..."</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># Our operations on the frame come here</span></span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="comment"># Display the resulting frame</span></span><br><span class="line">    cv.imshow(<span class="string">'frame'</span>, gray)</span><br><span class="line">    <span class="keyword">if</span> cv.waitKey(<span class="number">1</span>) == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="comment"># When everything done, release the capture</span></span><br><span class="line">cap.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure><p> <a href="https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html" target="_blank" rel="noopener">https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html</a> (<strong>video capture介绍</strong>)</p><p> You can also access some of the features of this video using <strong>cap.get(propId)</strong> method where propId is a number from 0 to 18. Each number denotes a property of the video (if it is applicable to that video). Full details can be seen here: <a href="https://docs.opencv.org/3.4/d8/dfe/classcv_1_1VideoCapture.html#aa6480e6972ef4c00d74814ec841a2939" target="_blank" rel="noopener">cv::VideoCapture::get()</a>. Some of these values can be modified using <strong>cap.set(propId, value)</strong>. Value is the new value you want. </p><p> <a href="https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d" target="_blank" rel="noopener">https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d</a> (<strong>get、set 参数详情</strong>)</p><table><thead><tr><th>get()</th><th></th></tr></thead><tbody><tr><td>CAP_PROP_POS_FRAMES<br>Python: cv.CAP_PROP_POS_FRAMES</td><td>0-based index of the frame to be decoded/captured next.<strong>1</strong></td></tr><tr><td>CAP_PROP_FRAME_WIDTH Python: cv.CAP_PROP_FRAME_WIDTH</td><td>Width of the frames in the video stream.<strong>3</strong></td></tr><tr><td>CAP_PROP_FRAME_HEIGHT Python: cv.CAP_PROP_FRAME_HEIGHT</td><td>Height of the frames in the video stream.<strong>4</strong></td></tr><tr><td>CAP_PROP_FPS Python: cv.CAP_PROP_FPS</td><td>Frame rate.<strong>5</strong></td></tr></tbody></table><h4 id="2-opencv-imread"><a href="#2-opencv-imread" class="headerlink" title="2. opencv imread"></a>2. opencv imread</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cv2.imread(<span class="string">'path'</span>).shape[<span class="number">0</span>]  <span class="comment">#height</span></span><br><span class="line">cv2.imread(<span class="string">'path'</span>).shape[<span class="number">1</span>]  <span class="comment">#width</span></span><br></pre></td></tr></table></figure><h4 id="3-opencv-resize"><a href="#3-opencv-resize" class="headerlink" title="3.opencv resize"></a>3.opencv resize</h4><p>函数原型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`cv2.resize(src, dsize[, dst[, fx[, fy[, interpolation]]]])`</span><br></pre></td></tr></table></figure><p>参数：</p><p><strong>src</strong>：要resize的原图，应该是一个矩阵</p><p><strong>size：</strong>希望得到图像的shape，<strong>是一个tuple类型的数据，注意，这里是宽*高，而我们平常img.shpae得到都是高*宽</strong></p><p><strong>fx</strong>，<strong>fy</strong> 一般不会用到</p><p><strong>interpolation：</strong> 插值方法</p><p>其中插值方式有很多种：</p><p><strong>INTER_NEAREST</strong>        最近邻插值<br><strong>INTER_LINEAR</strong>        双线性插值（默认设置）<br><strong>INTER_AREA **      使用像素区域关系进行重采样。 它可能是图像抽取的首选方法，因为它会产生无云纹理的结果。 但是当图像缩放时，它类似于INTER_NEAREST方法。<br>**INTER_CUBIC</strong>     4x4像素邻域的双三次插值<br><strong>INTER_LANCZOS4</strong>    8x8像素邻域的Lanczos插值</p><p>通常的，缩小使用cv.INTER_AREA，放缩使用cv.INTER_CUBIC(较慢)和cv.INTER_LINEAR(较快效果也不错)。默认情况下，所有的放缩都使用cv.INTER_LINEAR。</p><p>另外，一个小tips ，opencv 的imread 读图读出来应该是 BGR 模式 如果需要保存应该转成 RGB，下面这句代码就可以了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = img [:,:,::<span class="number">-1</span>]  <span class="comment">#所有行，所有列，所有竖（步长为-1）</span></span><br></pre></td></tr></table></figure><p>还有 注意 opencv 的resize 后矩阵的数据类型仍然应该是uint8，但是 在skimage.transform.resize() 里 返回的是 [0,1] 的矩阵，数据类型变为了 float 。</p><p>跑模型时，经常会遇到自己数据的size和原模型的size不一致，这时候可能需要自己resize，但尤其要注意：</p><p>原来imread读出来的矩阵的数据类型是uint8，而resize后的数据类型是float，这是(0，1)范围内的数，所以如果以后要转回uint8的话肯定会丢失精度，所以我的做法是：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = (resize(image, (<span class="number">128</span>, <span class="number">64</span>)) * <span class="number">255</span>).astype(np.uint8)  <span class="comment">#resize为skimage的</span></span><br></pre></td></tr></table></figure><p>强转为uint8</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;中&lt;strong&gt;opencv&lt;/strong&gt;模块学习记录&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="opencv" scheme="http://yoursite.com/tags/opencv/"/>
     
   </entry>
   
@@ -201,28 +223,6 @@
     
     
       <category term="numpy" scheme="http://yoursite.com/tags/numpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>opencv</title>
-    <link href="http://yoursite.com/2019/12/15/opencv/"/>
-    <id>http://yoursite.com/2019/12/15/opencv/</id>
-    <published>2019-12-14T16:00:00.000Z</published>
-    <updated>2019-12-15T13:10:26.762Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Python</strong>中<strong>opencv</strong>模块学习记录</p><a id="more"></a><h3 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h3><h4 id="1-视频"><a href="#1-视频" class="headerlink" title="1.视频"></a>1.视频</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">cap = cv.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> cap.isOpened():</span><br><span class="line">    print(<span class="string">"Cannot open camera"</span>)</span><br><span class="line">    exit()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># Capture frame-by-frame</span></span><br><span class="line">    ret, frame = cap.read()</span><br><span class="line">    <span class="comment"># if frame is read correctly ret is True</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ret:</span><br><span class="line">        print(<span class="string">"Can't receive frame (stream end?). Exiting ..."</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># Our operations on the frame come here</span></span><br><span class="line">    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="comment"># Display the resulting frame</span></span><br><span class="line">    cv.imshow(<span class="string">'frame'</span>, gray)</span><br><span class="line">    <span class="keyword">if</span> cv.waitKey(<span class="number">1</span>) == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="comment"># When everything done, release the capture</span></span><br><span class="line">cap.release()</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure><p> <a href="https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html" target="_blank" rel="noopener">https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html</a> (<strong>video capture介绍</strong>)</p><p> You can also access some of the features of this video using <strong>cap.get(propId)</strong> method where propId is a number from 0 to 18. Each number denotes a property of the video (if it is applicable to that video). Full details can be seen here: <a href="https://docs.opencv.org/3.4/d8/dfe/classcv_1_1VideoCapture.html#aa6480e6972ef4c00d74814ec841a2939" target="_blank" rel="noopener">cv::VideoCapture::get()</a>. Some of these values can be modified using <strong>cap.set(propId, value)</strong>. Value is the new value you want. </p><p> <a href="https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d" target="_blank" rel="noopener">https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html#gaeb8dd9c89c10a5c63c139bf7c4f5704d</a> (<strong>get、set 参数详情</strong>)</p><table><thead><tr><th>get()</th><th></th></tr></thead><tbody><tr><td>CAP_PROP_POS_FRAMES<br>Python: cv.CAP_PROP_POS_FRAMES</td><td>0-based index of the frame to be decoded/captured next.<strong>1</strong></td></tr><tr><td>CAP_PROP_FRAME_WIDTH Python: cv.CAP_PROP_FRAME_WIDTH</td><td>Width of the frames in the video stream.<strong>3</strong></td></tr><tr><td>CAP_PROP_FRAME_HEIGHT Python: cv.CAP_PROP_FRAME_HEIGHT</td><td>Height of the frames in the video stream.<strong>4</strong></td></tr><tr><td>CAP_PROP_FPS Python: cv.CAP_PROP_FPS</td><td>Frame rate.<strong>5</strong></td></tr></tbody></table><h4 id="2-opencv-imread"><a href="#2-opencv-imread" class="headerlink" title="2. opencv imread"></a>2. opencv imread</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cv2.imread(<span class="string">'path'</span>).shape[<span class="number">0</span>]  <span class="comment">#height</span></span><br><span class="line">cv2.imread(<span class="string">'path'</span>).shape[<span class="number">1</span>]  <span class="comment">#width</span></span><br></pre></td></tr></table></figure><h4 id="3-opencv-resize"><a href="#3-opencv-resize" class="headerlink" title="3.opencv resize"></a>3.opencv resize</h4><p>函数原型</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`cv2.resize(src, dsize[, dst[, fx[, fy[, interpolation]]]])`</span><br></pre></td></tr></table></figure><p>参数：</p><p><strong>src</strong>：要resize的原图，应该是一个矩阵</p><p><strong>size：</strong>希望得到图像的shape，<strong>是一个tuple类型的数据，注意，这里是宽*高，而我们平常img.shpae得到都是高*宽</strong></p><p><strong>fx</strong>，<strong>fy</strong> 一般不会用到</p><p><strong>interpolation：</strong> 插值方法</p><p>其中插值方式有很多种：</p><p><strong>INTER_NEAREST</strong>        最近邻插值<br><strong>INTER_LINEAR</strong>        双线性插值（默认设置）<br><strong>INTER_AREA **      使用像素区域关系进行重采样。 它可能是图像抽取的首选方法，因为它会产生无云纹理的结果。 但是当图像缩放时，它类似于INTER_NEAREST方法。<br>**INTER_CUBIC</strong>     4x4像素邻域的双三次插值<br><strong>INTER_LANCZOS4</strong>    8x8像素邻域的Lanczos插值</p><p>通常的，缩小使用cv.INTER_AREA，放缩使用cv.INTER_CUBIC(较慢)和cv.INTER_LINEAR(较快效果也不错)。默认情况下，所有的放缩都使用cv.INTER_LINEAR。</p><p>另外，一个小tips ，opencv 的imread 读图读出来应该是 BGR 模式 如果需要保存应该转成 RGB，下面这句代码就可以了</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img = img [:,:,::<span class="number">-1</span>]  <span class="comment">#所有行，所有列，所有竖（步长为-1）</span></span><br></pre></td></tr></table></figure><p>还有 注意 opencv 的resize 后矩阵的数据类型仍然应该是uint8，但是 在skimage.transform.resize() 里 返回的是 [0,1] 的矩阵，数据类型变为了 float 。</p><p>跑模型时，经常会遇到自己数据的size和原模型的size不一致，这时候可能需要自己resize，但尤其要注意：</p><p>原来imread读出来的矩阵的数据类型是uint8，而resize后的数据类型是float，这是(0，1)范围内的数，所以如果以后要转回uint8的话肯定会丢失精度，所以我的做法是：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">image = (resize(image, (<span class="number">128</span>, <span class="number">64</span>)) * <span class="number">255</span>).astype(np.uint8)  <span class="comment">#resize为skimage的</span></span><br></pre></td></tr></table></figure><p>强转为uint8</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;中&lt;strong&gt;opencv&lt;/strong&gt;模块学习记录&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="opencv" scheme="http://yoursite.com/tags/opencv/"/>
     
   </entry>
   
